@@ -1,42 +1,16 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import DonationForm from '../components/DonationForm';
-import { addDonation } from '../services/firebase';
-import { processPayment } from '../services/stripe';
+import React from "react";
+import Header from "../components/Header";
+import DonationForm from "../components/DonationForm";
+import "../styles/DonationForm.css";  // Nos styles pour le formulaire
+// Vous pouvez également créer et importer un fichier Donate.css pour des styles spécifiques à la page
 
-function Donate() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    amount: '',
-  });
-  const navigate = useNavigate();
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Envoi des informations dans Firebase
-    await addDonation(formData);
-
-    // Redirection vers la page de paiement
-    await processPayment(formData);
-
-    // Rediriger après paiement réussi
-    navigate('/');
-  };
-
+const Donate = () => {
   return (
-    <div className="donate">
-      <DonationForm formData={formData} onChange={handleChange} onSubmit={handleSubmit} />
+    <div className="donate-page">
+      <Header />
+      <DonationForm />
     </div>
   );
-}
+};
 
 export default Donate;

@@ -1,0 +1,120 @@
+/* Appliquer la police Avenir par défaut pour le formulaire */
+.donation-form,
+.donation-form input,
+.donation-form select,
+.donation-form button,
+.donation-form label,
+.donation-form p {
+  /* Assurez-vous que la police Avenir est chargée sur votre site */
+  font-family: "Avenir Light", Avenir, sans-serif;
+  color: #000;
+}
+
+/* Titres : 
+   - h1 en Avenir Black (titre 1)
+   - h2 en Avenir Medium (titre 2)
+   et tous en couleur rgb(0,0,185) */
+.donation-form h1 {
+  font-family: "Avenir Black", Avenir, sans-serif;
+  color: rgb(0, 0, 185);
+  margin-bottom: 15px;
+}
+
+.donation-form h2 {
+  font-family: "Avenir Medium", Avenir, sans-serif;
+  color: rgb(0, 0, 185);
+  margin-bottom: 15px;
+}
+
+/* Conteneur du formulaire */
+.donation-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* Sections du formulaire */
+.form-section,
+.donation-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+/* Groupes de champs */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Champs de saisie */
+.form-group input,
+.form-group select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Radio boutons */
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+/* Boutons de sélection de montant */
+/* On utilise la couleur des titres (rgb(0,0,185)) */
+.donation-buttons button {
+  margin: 5px 10px 5px 0;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 185);
+  background: #fff;
+  color: rgb(0, 0, 185);
+  border-radius: 5px;
+}
+
+.donation-buttons button:hover {
+  background: rgb(0, 0, 185);
+  color: #fff;
+}
+
+/* Champ pour montant personnalisé */
+.custom-donation {
+  margin-top: 10px;
+}
+
+.conditions-text {
+    font-size: 0.8rem; /* ajustez la taille si besoin */
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+  }  
+
+/* Bouton de soumission */
+.donation-form button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background: rgb(0, 0, 185);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.donation-form button[type="submit"]:hover {
+  background: rgb(0, 0, 160);
+}

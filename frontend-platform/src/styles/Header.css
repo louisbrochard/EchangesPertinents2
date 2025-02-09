@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(0, 0, 185); /* fond clair (à ajuster selon vos goûts) */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(0, 0, 185); /* accent avec la couleur des titres */
+  }
+  
+  .logo {
+    height: 50px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+  
