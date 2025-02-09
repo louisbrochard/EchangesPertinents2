@@ -1,14 +1,13 @@
-import React from 'react';
-import '../styles/header.css';
+// /frontend-mur/src/components/Header.jsx
+import React from "react";
+import "../styles/header.css";
 
-function Header() {
+const Header = () => {
   return (
     <header className="header">
-      <div className="logo-container">
-        <img src="/logo.png" alt="Logo Horizons" className="logo" />
-      </div>
+      <img src="/logo.png" alt="Logo Horizons" className="logo" />
     </header>
   );
-}
+};
 
 export default Header;

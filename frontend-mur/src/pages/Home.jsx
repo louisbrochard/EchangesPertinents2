@@ -1,35 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import QRCodeDisplay from '../components/QRCodeDisplay';
-import DonorList from '../components/DonorList';
-import ProgressBar from '../components/ProgressBar';
-import Header from '../components/Header';
-import { getDonations } from '../services/firebase';
-import '../styles/home.css';
+// /frontend-mur/src/pages/Home.jsx
+import React from "react";
+import QRCodeDisplay from "../components/QRCodeDisplay";
+import ProgressBar from "../components/ProgressBar";
+import DonorList from "../components/DonorList";
+import "../styles/home.css";
 
-function Home() {
-  const [donations, setDonations] = useState([]);
-
-  useEffect(() => {
-    getDonations(setDonations);
-  }, []);
-
+const Home = () => {
   return (
     <div className="home-container">
-      <Header />
       <div className="content">
         <div className="left">
           <QRCodeDisplay />
         </div>
         <div className="center">
-          <ProgressBar donations={donations} />
+          <ProgressBar />
         </div>
         <div className="right">
-          <DonorList donations={donations} />
+          <DonorList />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Home;
-

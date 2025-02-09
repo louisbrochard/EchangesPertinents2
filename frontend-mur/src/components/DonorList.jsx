@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from 'react';
+// /frontend-mur/src/components/DonorList.jsx
+import React, { useEffect, useState } from "react";
+import "../styles/home.css";
 
-function DonorList({ donations }) {
-  const [visibleDonations, setVisibleDonations] = useState([]);
+const DonorList = () => {
+  const [donors, setDonors] = useState([]);
 
   useEffect(() => {
-    if (donations.length > 0) {
-      setVisibleDonations((prev) => [...donations, ...prev]); // Ajoute les nouveaux dons en haut
-    }
-  }, [donations]);
+    // Simulation d’une récupération des dons
+    setDonors([
+      { name: "Louis Brochard", amount: 50 },
+      { name: "Alexandre Colson", amount: 100 },
+    ]);
+  }, []);
 
   return (
     <div className="donor-list">
-      <div className="donor-list-wrapper">
-        {visibleDonations.map((donor, index) => (
-          <div key={index} className="donor-item">
-            <span className="donor-name">{donor.name}</span>
-            <span className="donor-amount">+{donor.amount}€</span>
-          </div>
-        ))}
-      </div>
+      {donors.map((donor, index) => (
+        <p key={index} className="donor-item">
+          {donor.name} +{donor.amount}€
+        </p>
+      ))}
     </div>
   );
-}
+};
 
 export default DonorList;

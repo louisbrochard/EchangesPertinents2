@@ -1,15 +1,16 @@
-import React from 'react';
-import QRCode from 'react-qr-code';
-import '../styles/qrCode.css';
+// /frontend-mur/src/components/QRCodeDisplay.jsx
+import React from "react";
+import "../styles/qrCode.css";
 
-function QRCodeDisplay() {
-  const donateUrl = `${window.location.origin}/donate`;
-
+const QRCodeDisplay = () => {
   return (
     <div className="qr-code">
-      <QRCode value={donateUrl} size={256} />
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://example.com/donate"
+        alt="QR Code"
+      />
     </div>
   );
-}
+};
 
 export default QRCodeDisplay;

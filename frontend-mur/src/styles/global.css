@@ -1,0 +1,57 @@
+/* /frontend-mur/src/styles/global.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+  
+  .home, .donate {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .qr-code {
+    margin: 20px 0;
+  }
+  
+  .progress-bar {
+    margin: 20px 0;
+    width: 100%;
+    background-color: #ddd;
+  }
+  
+  .progress {
+    height: 20px;
+    background-color: #4caf50;
+  }
+  
+  .donor-list {
+    margin-top: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form label {
+    margin: 10px 0;
+  }
+  
+  form input {
+    padding: 10px;
+    margin: 5px 0;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  

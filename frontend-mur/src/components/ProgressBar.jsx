@@ -1,18 +1,29 @@
-import React from 'react';
+// /frontend-mur/src/components/ProgressBar.jsx
+import React, { useState, useEffect } from "react";
+import "../styles/home.css";
 
-function ProgressBar({ donations }) {
-  const totalDonations = donations.reduce((acc, donor) => acc + parseFloat(donor.amount), 0);
+const ProgressBar = () => {
+  const [totalAmount, setTotalAmount] = useState(0);
   const goal = 10000;
-  const progress = Math.min((totalDonations / goal) * 100, 100);
+
+  useEffect(() => {
+    // Simulation d’un montant collecté (exemple)
+    setTotalAmount(5000);
+  }, []);
 
   return (
-    <div className="progress-bar-container">
+    <div className="progress-container">
       <div className="progress-bar">
-        <div className="progress" style={{ height: `${progress}%` }}></div>
+        <div
+          className="progress"
+          style={{ height: `${(totalAmount / goal) * 100}%` }}
+        />
       </div>
-      <p className="progress-text">{totalDonations}€ / {goal}€</p>
+      <p>
+        {totalAmount}€ / {goal}€
+      </p>
     </div>
   );
-}
+};
 
 export default ProgressBar;
